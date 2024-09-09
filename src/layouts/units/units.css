@@ -1,0 +1,36 @@
+.unit_cont {
+  display: flex;
+  width: 100%;
+  padding: 2px;
+  gap: 2px;
+  color: #838383;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.unit_one {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: auto;
+}
+
+.unit_two {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.num_unit {
+  font-size: clamp(20px, 4vw, 50px);
+  color: #363636;
+  font-weight: 800;
+}
+
+.unit_cont p {
+  text-align: center;
+}

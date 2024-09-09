@@ -1,0 +1,95 @@
+.feature_container {
+  background: url(../../assets/images/feature1.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-origin: content-box;
+  /* background-blend-mode: overlay; */
+  padding: 20px;
+  /* backdrop-filter: blur(100px); */
+}
+
+.feature_container .feature {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  color: #000000;
+  /* backdrop-filter: blur(20px); */
+}
+
+.feature_container .feature .feature_header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.feature_container .feature .features {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.feature_container .feature .features .feature_1 {
+  width: 100%;
+  flex: 1;
+  min-width: 300px;
+  height: 250px;
+  background: #e9e9e938;
+  backdrop-filter: blur(10px);
+  position: relative;
+  cursor: pointer;
+}
+
+.feature_container .feature .features .feature_1:hover {
+  background: #ffffff;
+}
+
+.feature_container .feature .features .feature_1:hover::before {
+  width: 100%;
+}
+.feature_container .feature .features .feature_1::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #080;
+  bottom: 0;
+  transition: all 400ms ease;
+}
+
+.feature_container .feature .features .feature_1 .feature_img {
+  width: 100%;
+  max-height: 150px;
+  height: 100%;
+  overflow: hidden;
+  background: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature_container .feature .features .feature_1 .feature_img img {
+  width: 100%;
+  transition: all 400ms ease;
+}
+
+.feature_container .feature .features .feature_1:hover .feature_img img {
+  width: 200%;
+}
+
+.feature_container .feature .features .feature_1 .feaure_cotent {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature_container .feature .features .feature_1 .feaure_cotent small {
+  color: #050505;
+}
+
+@media (max-width: 620px) {
+  .feature_container .feature .features .feature_1 .feaure_cotent {
+    text-align: center;
+  }
+}

@@ -1,0 +1,67 @@
+.loop_container {
+  width: 100%;
+  height: 205px;
+  padding: 5px;
+}
+
+.loop_container .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.loop_container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loop_container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loop_container .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: 15px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  color: #ccc;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-weight: 800;
+  border-radius: 3px;
+}
+
+.loop_container .swiper-button-prev {
+  top: 175px;
+}
+.loop_container .swiper-button-next {
+  top: 175px;
+  left: 50px;
+}

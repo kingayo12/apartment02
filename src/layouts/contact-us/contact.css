@@ -1,0 +1,124 @@
+.bg_contact,
+.bg_map {
+  background: url(../../assets/images/feature1.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-origin: border-box;
+
+  overflow: hidden;
+}
+
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+  margin: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2,
+.contact-form h2,
+.map-section h2,
+.business-hours h2,
+.social-media h2 {
+  margin: 12px 0;
+  font-size: 1.8em;
+}
+
+.contact-info p,
+.business-hours p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #414141;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 0;
+  text-indent: 10px;
+  font-size: 1em;
+  background: transparent;
+  border-style: none;
+  outline: none;
+  box-shadow: 2px 3px 4px #00000007;
+  border-bottom: 2px solid #ccc;
+  text-rendering: optimizeLegibility;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 2px solid #080;
+}
+
+.contact-form .btn {
+  background-color: #080;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: #080;
+}
+
+.map-section {
+  height: 400px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #080;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #080;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+.iconc:hover {
+  color: #080;
+}
+
+.contact-info p:hover {
+  color: #080;
+}
+
+.map h1 {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  color: #0000009f;
+  padding: 20px;
+  text-align: center;
+}

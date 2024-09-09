@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background: #f9f9f9;
+  background: radial-gradient(circle at center, #017929, #83e4bf, #f0f2f0);
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+  /* overflow: hidden; */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+}
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  clear: both;
+  margin: auto;
+}
+
+.wrapper {
+  background: #ffffffda;
+  backdrop-filter: blur(100px);
+}
+
+.snakestyle {
+  /* background: pink; */
+  font-weight: 700;
+  position: relative;
+}
+
+.snakestyle img {
+  max-width: 100%;
+  height: auto;
+}
+
+.curve-shape {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+.map h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 20px 0;
+  color: #000;
+}

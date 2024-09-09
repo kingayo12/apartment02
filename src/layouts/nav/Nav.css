@@ -1,0 +1,217 @@
+.nav_container {
+  z-index: 9999999;
+  background: #ffffffda;
+  /* backdrop-filter: blur(100px); */
+}
+
+.nav_container .nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_container .nav .top_nav {
+  background: #ffffff0c;
+  height: 50px;
+  backdrop-filter: blur(100px);
+}
+
+.nav_container .nav .top_nav .logo {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_container .nav .top_nav .logo img {
+  width: 100%;
+}
+
+.nav_container .nav .top_nav section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_container .nav .top_nav .icona {
+  color: #080;
+}
+
+.nav_container .nav .top_nav .contact {
+  display: flex;
+}
+
+.nav_container .nav .top_nav .contact a {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  font-size: 13px;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav_container .nav .top_nav .contact a span {
+  color: #000;
+}
+
+.nav_container .nav .bottom_nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+}
+
+.nav_container .nav .bottom_nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffffcb;
+  backdrop-filter: blur(100px);
+  z-index: 99999999999;
+}
+
+.nav_container .nav .bottom_nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: 100%;
+}
+
+.nav_container .nav .bottom_nav ul li {
+  list-style: none;
+}
+
+.nav_container .nav .bottom_nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0;
+  z-index: 9999999;
+}
+
+.nav_container .nav .bottom_nav ul li a:hover {
+  color: #080;
+}
+
+.bottom_nav ul li a.active {
+  color: #080 !important;
+}
+
+.nav_container .nav .bottom_nav ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background: #080;
+  border-radius: 3px;
+  transition: width 400ms ease;
+}
+
+.nav_container .nav .bottom_nav ul li a:hover::before {
+  width: 100%;
+  background: #080;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* Push hamburger to the right */
+  margin-right: 20px;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #080;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 1020px) {
+  .nav_container .nav .top_nav .contact {
+    display: none;
+  }
+
+  .nav_container .nav .bottom_nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav_container .nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .nav_container .nav .bottom_nav {
+    width: 100%;
+    position: fixed !important;
+    max-width: 100%;
+    top: 50px;
+    left: 0;
+    background-color: #fff !important;
+    backdrop-filter: blur(100px);
+    height: 60vh;
+    display: none;
+    box-shadow: 2px 3px 4px #fff;
+  }
+
+  .nav_container .nav .bottom_nav.fixed {
+    /* display: none;  */
+    display: none;
+    align-items: center;
+    justify-content: start;
+    max-width: 100%;
+    width: 100%;
+    position: fixed !important;
+    top: 50px;
+    left: 0;
+    background-color: #fff !important;
+    z-index: 1000;
+    height: 100%;
+    box-shadow: 1px 2px 3px #ccc;
+    margin: 0;
+    height: 60vh;
+  }
+
+  .nav_container .nav .bottom_nav ul {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 !important;
+  }
+
+  .nav_container .nav .bottom_nav ul li a {
+    color: #000000;
+    width: 100%;
+    font-size: 30px;
+  }
+  .nav_container .nav .bottom_nav.active {
+    display: flex;
+  }
+
+  /* .nav_container .nav .bottom_nav.active.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c2c2ca2;
+    backdrop-filter: blur(100px);
+    z-index: 99999;
+  } */
+}
